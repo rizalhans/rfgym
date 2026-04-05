@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:43:9-51:20
+INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:44:9-52:20
 	android:grantUriPermissions
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:47:13-47
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:48:13-47
 	android:authorities
 		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:45:13-64
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:46:13-64
 	android:exported
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:46:13-37
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:44:13-62
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:45:13-62
 manifest
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-54:12
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-55:12
 MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/656249efd103dd1b02ac73a493a8d6f5/transformed/viewbinding-8.5.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/7f97d264f13aac2ced4fd6a3f60e52ba/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/2513e894d292adb3f06ac91373929ba4/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
@@ -108,8 +108,8 @@ ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.x
 	android:name
 		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:17:22-73
 application
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:19:5-52:19
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:19:5-52:19
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:19:5-53:19
+INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:19:5-53:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/7f97d264f13aac2ced4fd6a3f60e52ba/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/7f97d264f13aac2ced4fd6a3f60e52ba/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/15f4a640c7207b24b0b3a9bf0413ea98/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -135,9 +135,9 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rizalhans/.gradle/ca
 	android:label
 		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:22:9-41
 	android:roundIcon
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:24:9-56
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:24:9-54
 	android:icon
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:21:9-51
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:21:9-43
 	android:allowBackup
 		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:20:9-35
 	android:theme
@@ -147,35 +147,37 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rizalhans/.gradle/ca
 	android:usesCleartextTraffic
 		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:27:9-44
 activity#com.mastergym.webview.MainActivity
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:28:9-30:40
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:28:9-31:40
 	android:exported
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:30:13-37
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:31:13-37
+	android:configChanges
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:30:13-74
 	android:name
 		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:29:13-41
 activity#com.mastergym.webview.SplashActivity
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:32:9-41:20
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:33:9-42:20
 	android:exported
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:34:13-36
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:35:13-36
 	android:theme
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:35:13-60
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:36:13-60
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:33:13-43
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:34:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:36:13-40:29
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:37:13-41:29
 action#android.intent.action.MAIN
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:37:17-69
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:37:25-66
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:39:17-77
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:39:27-74
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:40:27-74
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:48:13-50:54
+ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:49:13-51:54
 	android:resource
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:50:17-51
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:51:17-51
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:49:17-67
+		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:50:17-67
 uses-sdk
 INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml

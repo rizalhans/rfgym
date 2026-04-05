@@ -1,26 +1,106 @@
 [
     {
-        "merged": "com.mastergym.webview.app-debug-35:/layout_activity_main.xml.flat",
-        "source": "com.mastergym.webview.app-main-37:/layout/activity_main.xml"
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.mastergym.webview.app-debug-35:/xml_network_security_config.xml.flat",
-        "source": "com.mastergym.webview.app-main-37:/xml/network_security_config.xml"
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.mastergym.webview.app-debug-35:/drawable_ic_mastergym_logo.xml.flat",
-        "source": "com.mastergym.webview.app-main-37:/drawable/ic_mastergym_logo.xml"
+        "merged": "com.mastergym.webview.app-debug-35:/drawable_logo.png.flat",
+        "source": "com.mastergym.webview.app-main-37:/drawable/logo.png"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/xml_network_security_config.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/xml/network_security_config.xml"
     },
     {
         "merged": "com.mastergym.webview.app-debug-35:/layout_activity_splash.xml.flat",
         "source": "com.mastergym.webview.app-main-37:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.mastergym.webview.app-debug-35:/xml_file_paths.xml.flat",
-        "source": "com.mastergym.webview.app-main-37:/xml/file_paths.xml"
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.mastergym.webview.app-debug-35:/drawable_mastergym_logo_badge.xml.flat",
-        "source": "com.mastergym.webview.app-main-37:/drawable/mastergym_logo_badge.xml"
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/xml_file_paths.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/xml/file_paths.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/drawable_mastergym_logo_badge.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/drawable/mastergym_logo_badge.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/layout_activity_splash.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/drawable_ic_mastergym_logo.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/drawable/ic_mastergym_logo.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-debug-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rizalhans/.gradle/daemon/9.0-milestone-1/com.mastergym.webview.app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
     }
 ]

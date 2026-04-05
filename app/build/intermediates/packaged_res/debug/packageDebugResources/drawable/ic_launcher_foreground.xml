@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Using a group to scale/center the badge logic if it was a vector path,
+         but since mastergym_logo_badge is a layer-list of shapes,
+         we can't easily put it inside a vector.
+         Wait, I can just use a layer-list for the foreground too, or just use the badge. -->
+</vector>
