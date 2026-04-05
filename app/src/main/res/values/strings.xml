@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MasterGym WebView</string>
+    <string name="app_name">Master Gym</string>
     <string name="webview_url">https://mastergym.id</string>
     <string name="open_link_error">Tidak ada aplikasi untuk membuka tautan ini.</string>
     <string name="file_chooser_title">Pilih file atau foto</string>

@@ -1,4 +1,4 @@
-# MasterGym WebView Android App
+# Master Gym Android App
 
 Aplikasi Android sederhana berbasis **WebView** dengan Kotlin.
 
