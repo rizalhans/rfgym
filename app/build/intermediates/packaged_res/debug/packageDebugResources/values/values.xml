@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="brand_black">#050505</color>
+    <color name="brand_light_gray">#E7E7E7</color>
+    <color name="brand_light_orange">#F6B26B</color>
+    <color name="brand_orange">#F2994A</color>
+    <color name="brand_white">#FFFFFF</color>
+    <string name="app_name">MasterGym WebView</string>
+    <string name="file_chooser_error">Pemilih file tidak tersedia di perangkat ini.</string>
+    <string name="file_chooser_title">Pilih file atau foto</string>
+    <string name="file_permission_denied">Izin foto/kamera dibutuhkan untuk upload gambar.</string>
+    <string name="open_link_error">Tidak ada aplikasi untuk membuka tautan ini.</string>
+    <string name="print_empty_content">Konten print masih kosong.</string>
+    <string name="print_job_name">MasterGym Thermal Print</string>
+    <string name="print_not_available">Layanan print belum tersedia di perangkat ini.</string>
+    <string name="print_started">Dialog print telah dibuka.</string>
+    <string name="printer_connecting">Menghubungkan ke %1$s…</string>
+    <string name="printer_failed_fallback">Print Bluetooth gagal, dialihkan ke dialog print Android.</string>
+    <string name="printer_permission_denied">Izin Bluetooth dibutuhkan untuk print thermal langsung.</string>
+    <string name="printer_picker_title">Pilih printer thermal</string>
+    <string name="printer_selection_cleared">Printer tersimpan sudah direset.</string>
+    <string name="printer_sent_to_device">Print terkirim ke %1$s.</string>
+    <string name="printer_unknown_name">Printer Bluetooth</string>
+    <string name="splash_subtitle">www.mastergym.id</string>
+    <string name="splash_tagline">Fitness &amp; Senam</string>
+    <string name="splash_title">MASTER GYM</string>
+    <string name="webview_url">https://mastergym.id</string>
+    <style name="Theme.MasterGymWV" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/brand_black</item>
+        <item name="android:statusBarColor">@color/brand_black</item>
+        <item name="android:windowBackground">@color/brand_black</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">false</item>
+    </style>
+    <style name="Theme.MasterGymWV.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/brand_black</item>
+        <item name="android:statusBarColor">@color/brand_black</item>
+        <item name="android:windowBackground">@color/brand_black</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">false</item>
+        <item name="android:windowLightNavigationBar" ns1:targetApi="27">false</item>
+    </style>
+</resources>

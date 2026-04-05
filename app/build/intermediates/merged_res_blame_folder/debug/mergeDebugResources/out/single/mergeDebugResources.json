@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/xml_network_security_config.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/drawable_ic_mastergym_logo.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/drawable/ic_mastergym_logo.xml"
+    },
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/layout_activity_splash.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/xml_file_paths.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.mastergym.webview.app-debug-35:/drawable_mastergym_logo_badge.xml.flat",
+        "source": "com.mastergym.webview.app-main-37:/drawable/mastergym_logo_badge.xml"
+    }
+]

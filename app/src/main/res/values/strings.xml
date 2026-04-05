@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MasterGym WebView</string>
+    <string name="webview_url">https://mastergym.id</string>
+    <string name="open_link_error">Tidak ada aplikasi untuk membuka tautan ini.</string>
+    <string name="file_chooser_title">Pilih file atau foto</string>
+    <string name="file_chooser_error">Pemilih file tidak tersedia di perangkat ini.</string>
+    <string name="file_permission_denied">Izin foto/kamera dibutuhkan untuk upload gambar.</string>
+    <string name="splash_title">MASTER GYM</string>
+    <string name="splash_subtitle">www.mastergym.id</string>
+    <string name="splash_tagline">Fitness &amp; Senam</string>
+    <string name="print_job_name">MasterGym Thermal Print</string>
+    <string name="print_started">Dialog print telah dibuka.</string>
+    <string name="print_empty_content">Konten print masih kosong.</string>
+    <string name="print_not_available">Layanan print belum tersedia di perangkat ini.</string>
+    <string name="printer_picker_title">Pilih printer thermal</string>
+    <string name="printer_unknown_name">Printer Bluetooth</string>
+    <string name="printer_connecting">Menghubungkan ke %1$s…</string>
+    <string name="printer_sent_to_device">Print terkirim ke %1$s.</string>
+    <string name="printer_failed_fallback">Print Bluetooth gagal, dialihkan ke dialog print Android.</string>
+    <string name="printer_permission_denied">Izin Bluetooth dibutuhkan untuk print thermal langsung.</string>
+    <string name="printer_selection_cleared">Printer tersimpan sudah direset.</string>
+</resources>

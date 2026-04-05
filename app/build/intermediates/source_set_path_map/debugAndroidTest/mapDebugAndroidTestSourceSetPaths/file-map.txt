@@ -1,0 +1,5 @@
+com.mastergym.webview.test.app-core-1.6.1-0 /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/c5d43c2119d3b965cde23035c2d3ea4b/transformed/core-1.6.1/res
+com.mastergym.webview.test.app-androidTest-1 /Users/rizalhans/Projects/mastergym-wv/app/build/generated/res/resValues/androidTest/debug
+com.mastergym.webview.test.app-mergeDebugAndroidTestResources-2 /Users/rizalhans/Projects/mastergym-wv/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.mastergym.webview.test.app-mergeDebugAndroidTestResources-3 /Users/rizalhans/Projects/mastergym-wv/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.mastergym.webview.test.app-debugAndroidTest-4 /Users/rizalhans/Projects/mastergym-wv/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources
