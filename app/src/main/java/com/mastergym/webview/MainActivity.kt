@@ -51,8 +51,25 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val PRINTER_PREFS = "thermal_printer_prefs"
         private const val KEY_PRINTER_ADDRESS = "selected_printer_address"
+        private const val THERMAL_LINE_WIDTH = 32
         private val SPP_UUID: UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
+        private val ESC_ALIGN_LEFT = byteArrayOf(0x1B, 0x61, 0x00)
+        private val ESC_ALIGN_CENTER = byteArrayOf(0x1B, 0x61, 0x01)
+        private val ESC_ALIGN_RIGHT = byteArrayOf(0x1B, 0x61, 0x02)
+        private val ESC_BOLD_OFF = byteArrayOf(0x1B, 0x45, 0x00)
+        private val ESC_BOLD_ON = byteArrayOf(0x1B, 0x45, 0x01)
+        private val ESC_UNDERLINE_OFF = byteArrayOf(0x1B, 0x2D, 0x00)
+        private val ESC_UNDERLINE_ON = byteArrayOf(0x1B, 0x2D, 0x01)
+        private val ESC_TEXT_SIZE_NORMAL = byteArrayOf(0x1D, 0x21, 0x00)
+        private val ESC_TEXT_SIZE_TALL = byteArrayOf(0x1D, 0x21, 0x01)
+        private val ESC_TEXT_SIZE_WIDE = byteArrayOf(0x1D, 0x21, 0x10)
+        private val ESC_TEXT_SIZE_BIG = byteArrayOf(0x1D, 0x21, 0x11)
     }
+
+    private data class PrinterColumn(
+        val align: Char,
+        val text: String
+    )
 
     private lateinit var binding: ActivityMainBinding
     private var filePathCallback: ValueCallback<Array<Uri>>? = null
@@ -89,7 +106,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, getString(R.string.printer_permission_denied), Toast.LENGTH_SHORT)
                     .show()
-                fallbackToSystemPrint(content, logo)
             }
         }
 
@@ -411,51 +427,68 @@ class MainActivity : AppCompatActivity() {
 
     private fun continueThermalPrint(content: String, linkLogo: String) {
         val bluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
-        val pairedPrinters = bluetoothAdapter?.bondedDevices?.toList().orEmpty().sortedBy {
-            it.name ?: it.address
-        }
+        val pairedPrinters = bluetoothAdapter?.bondedDevices
+            ?.toList()
+            .orEmpty()
+            .sortedWith(
+                compareBy<BluetoothDevice>(
+                    { it.name?.trim()?.lowercase().orEmpty() },
+                    { it.address.lowercase() }
+                )
+            )
 
         if (bluetoothAdapter?.isEnabled == true && pairedPrinters.isNotEmpty()) {
             val savedAddress = getSharedPreferences(PRINTER_PREFS, Context.MODE_PRIVATE)
                 .getString(KEY_PRINTER_ADDRESS, null)
-            val savedPrinter = pairedPrinters.firstOrNull { it.address == savedAddress }
-
-            if (savedPrinter != null) {
-                printToBluetoothPrinter(savedPrinter, content, linkLogo)
-            } else {
-                showPrinterChooser(pairedPrinters, content, linkLogo)
-            }
+            showPrinterChooser(pairedPrinters, savedAddress, content, linkLogo)
         } else {
-            fallbackToSystemPrint(content, linkLogo)
+            Toast.makeText(this, getString(R.string.printer_not_available), Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun showPrinterChooser(
         pairedPrinters: List<BluetoothDevice>,
+        savedAddress: String?,
         content: String,
         linkLogo: String
     ) {
-        if (pairedPrinters.size == 1) {
-            savePrinterSelection(pairedPrinters.first())
-            printToBluetoothPrinter(pairedPrinters.first(), content, linkLogo)
-            return
-        }
+        var selectedIndex = pairedPrinters.indexOfFirst { it.address == savedAddress }
+            .takeIf { it >= 0 }
+            ?: 0
 
         val labels = pairedPrinters.map { device ->
             val name = device.name?.takeIf { it.isNotBlank() } ?: getString(R.string.printer_unknown_name)
-            "$name\n${device.address}"
+            val savedSuffix = if (device.address == savedAddress) {
+                " • ${getString(R.string.printer_saved_badge)}"
+            } else {
+                ""
+            }
+            "$name\n${device.address}$savedSuffix"
         }.toTypedArray()
 
         AlertDialog.Builder(this)
             .setTitle(R.string.printer_picker_title)
-            .setItems(labels) { _, which ->
-                val selectedPrinter = pairedPrinters[which]
+            .setSingleChoiceItems(labels, selectedIndex) { _, which ->
+                selectedIndex = which
+            }
+            .setPositiveButton(R.string.printer_action_print) { _, _ ->
+                val selectedPrinter = pairedPrinters[selectedIndex]
+                printToBluetoothPrinter(selectedPrinter, content, linkLogo)
+            }
+            .setNeutralButton(R.string.printer_action_save_and_print) { _, _ ->
+                val selectedPrinter = pairedPrinters[selectedIndex]
                 savePrinterSelection(selectedPrinter)
+                Toast.makeText(
+                    this,
+                    getString(R.string.printer_saved, selectedPrinter.name ?: selectedPrinter.address),
+                    Toast.LENGTH_SHORT
+                ).show()
                 printToBluetoothPrinter(selectedPrinter, content, linkLogo)
             }
             .setNegativeButton(android.R.string.cancel) { dialog, _ ->
                 dialog.dismiss()
-                fallbackToSystemPrint(content, linkLogo)
+                Toast.makeText(this, getString(R.string.printer_selection_cancelled), Toast.LENGTH_SHORT)
+                    .show()
             }
             .show()
     }
@@ -475,7 +508,7 @@ class MainActivity : AppCompatActivity() {
         ).show()
 
         Thread {
-            var fallbackMessage: String? = null
+            var errorMessage: String? = null
             try {
                 BluetoothAdapter.getDefaultAdapter()?.cancelDiscovery()
                 val socket = device.createRfcommSocketToServiceRecord(SPP_UUID)
@@ -494,13 +527,12 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                 }
             } catch (_: Exception) {
-                fallbackMessage = getString(R.string.printer_failed_fallback)
+                errorMessage = getString(R.string.printer_failed_no_fallback)
             }
 
-            if (fallbackMessage != null) {
+            if (errorMessage != null) {
                 runOnUiThread {
-                    Toast.makeText(this, fallbackMessage, Toast.LENGTH_SHORT).show()
-                    fallbackToSystemPrint(content, linkLogo)
+                    Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                 }
             }
         }.start()
@@ -509,7 +541,7 @@ class MainActivity : AppCompatActivity() {
     private fun buildEscPosReceipt(content: String, linkLogo: String): ByteArray {
         val outputStream = ByteArrayOutputStream()
         outputStream.write(byteArrayOf(0x1B, 0x40))
-        outputStream.write(byteArrayOf(0x1B, 0x61, 0x01))
+        outputStream.write(ESC_ALIGN_CENTER)
 
         if (linkLogo.isNotBlank()) {
             loadLogoForEscPos(linkLogo)?.let { logoBytes ->
@@ -518,26 +550,202 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        outputStream.write(byteArrayOf(0x1B, 0x61, 0x00))
-        outputStream.write(formatThermalText(content).toByteArray(Charsets.UTF_8))
+        writeEscPosFormattedText(outputStream, content)
+        outputStream.write(ESC_BOLD_OFF)
+        outputStream.write(ESC_UNDERLINE_OFF)
+        outputStream.write(ESC_TEXT_SIZE_NORMAL)
+        outputStream.write(ESC_ALIGN_LEFT)
         outputStream.write("\n\n\n".toByteArray(Charsets.UTF_8))
         return outputStream.toByteArray()
+    }
+
+    private fun writeEscPosFormattedText(outputStream: ByteArrayOutputStream, content: String) {
+        val normalizedText = formatThermalText(content)
+        if (normalizedText.isBlank()) {
+            return
+        }
+
+        normalizedText
+            .replace("\r\n", "\n")
+            .split("\n")
+            .forEach { rawLine ->
+                if (rawLine.isBlank()) {
+                    outputStream.write("\n".toByteArray(Charsets.UTF_8))
+                } else {
+                    writeEscPosLine(outputStream, rawLine)
+                }
+            }
+    }
+
+    private fun writeEscPosLine(outputStream: ByteArrayOutputStream, rawLine: String) {
+        val columns = parsePrinterColumns(rawLine)
+
+        if (columns.isEmpty()) {
+            outputStream.write(ESC_ALIGN_LEFT)
+            writeEscPosStyledText(outputStream, rawLine)
+            outputStream.write(ESC_BOLD_OFF)
+            outputStream.write(ESC_UNDERLINE_OFF)
+            outputStream.write(ESC_TEXT_SIZE_NORMAL)
+            outputStream.write("\n".toByteArray(Charsets.UTF_8))
+            return
+        }
+
+        if (columns.size == 1) {
+            val alignment = when (columns.first().align) {
+                'C' -> ESC_ALIGN_CENTER
+                'R' -> ESC_ALIGN_RIGHT
+                else -> ESC_ALIGN_LEFT
+            }
+            outputStream.write(alignment)
+            writeEscPosStyledText(outputStream, columns.first().text)
+            outputStream.write(ESC_BOLD_OFF)
+            outputStream.write(ESC_UNDERLINE_OFF)
+            outputStream.write(ESC_TEXT_SIZE_NORMAL)
+            outputStream.write(ESC_ALIGN_LEFT)
+            outputStream.write("\n".toByteArray(Charsets.UTF_8))
+            return
+        }
+
+        outputStream.write(ESC_ALIGN_LEFT)
+        val columnWidths = distributeColumnWidths(columns.size, THERMAL_LINE_WIDTH)
+
+        columns.forEachIndexed { index, column ->
+            val sanitizedText = sanitizeEscPosText(column.text)
+            val visibleLength = decodePrintableText(stripEscPosTags(sanitizedText)).length
+            val padding = (columnWidths[index] - visibleLength).coerceAtLeast(0)
+            val leftPadding = when (column.align) {
+                'C' -> padding / 2
+                'R' -> padding
+                else -> 0
+            }
+            val rightPadding = when (column.align) {
+                'C' -> padding - leftPadding
+                'L' -> padding
+                else -> 0
+            }
+
+            if (leftPadding > 0) {
+                outputStream.write(" ".repeat(leftPadding).toByteArray(Charsets.UTF_8))
+            }
+            writeEscPosStyledText(outputStream, sanitizedText)
+            if (rightPadding > 0) {
+                outputStream.write(" ".repeat(rightPadding).toByteArray(Charsets.UTF_8))
+            }
+        }
+
+        outputStream.write(ESC_BOLD_OFF)
+        outputStream.write(ESC_UNDERLINE_OFF)
+        outputStream.write(ESC_TEXT_SIZE_NORMAL)
+        outputStream.write("\n".toByteArray(Charsets.UTF_8))
+    }
+
+    private fun parsePrinterColumns(line: String): List<PrinterColumn> {
+        val matches = Regex("""\[(L|C|R)]""", RegexOption.IGNORE_CASE).findAll(line).toList()
+        if (matches.isEmpty()) {
+            return emptyList()
+        }
+
+        val columns = mutableListOf<PrinterColumn>()
+        if (matches.first().range.first > 0) {
+            columns.add(PrinterColumn('L', line.substring(0, matches.first().range.first)))
+        }
+
+        matches.forEachIndexed { index, match ->
+            val start = match.range.last + 1
+            val end = if (index + 1 < matches.size) matches[index + 1].range.first else line.length
+            columns.add(PrinterColumn(match.groupValues[1].uppercase().first(), line.substring(start, end)))
+        }
+
+        return columns
+    }
+
+    private fun distributeColumnWidths(columns: Int, totalWidth: Int): List<Int> {
+        val baseWidth = totalWidth / columns
+        val remainder = totalWidth % columns
+        return List(columns) { index ->
+            baseWidth + if (index < remainder) 1 else 0
+        }
+    }
+
+    private fun writeEscPosStyledText(outputStream: ByteArrayOutputStream, text: String) {
+        val sanitizedText = sanitizeEscPosText(text)
+        val tagRegex = Regex("<[^>]+>", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL))
+        var cursor = 0
+
+        tagRegex.findAll(sanitizedText).forEach { match ->
+            val plainText = sanitizedText.substring(cursor, match.range.first)
+            if (plainText.isNotEmpty()) {
+                outputStream.write(decodePrintableText(plainText).toByteArray(Charsets.UTF_8))
+            }
+
+            when {
+                match.value.equals("<b>", ignoreCase = true) -> outputStream.write(ESC_BOLD_ON)
+                match.value.equals("</b>", ignoreCase = true) -> outputStream.write(ESC_BOLD_OFF)
+                match.value.startsWith("<u", ignoreCase = true) -> outputStream.write(ESC_UNDERLINE_ON)
+                match.value.equals("</u>", ignoreCase = true) -> outputStream.write(ESC_UNDERLINE_OFF)
+                match.value.startsWith("<font", ignoreCase = true) -> outputStream.write(fontSizeCommand(match.value))
+                match.value.equals("</font>", ignoreCase = true) -> outputStream.write(ESC_TEXT_SIZE_NORMAL)
+            }
+
+            cursor = match.range.last + 1
+        }
+
+        if (cursor < sanitizedText.length) {
+            outputStream.write(
+                decodePrintableText(sanitizedText.substring(cursor)).toByteArray(Charsets.UTF_8)
+            )
+        }
+    }
+
+    private fun fontSizeCommand(tag: String): ByteArray {
+        val lowerTag = tag.lowercase()
+        return when {
+            "size='wide'" in lowerTag || "size=\"wide\"" in lowerTag -> ESC_TEXT_SIZE_WIDE
+            "size='tall'" in lowerTag || "size=\"tall\"" in lowerTag -> ESC_TEXT_SIZE_TALL
+            "size='big" in lowerTag || "size=\"big" in lowerTag -> ESC_TEXT_SIZE_BIG
+            else -> ESC_TEXT_SIZE_NORMAL
+        }
+    }
+
+    private fun sanitizeEscPosText(text: String): String {
+        return text
+            .replace(Regex("(?is)<img>.*?</img>"), "")
+            .replace(Regex("(?is)<barcode[^>]*>(.*?)</barcode>"), "$1")
+            .replace(Regex("(?is)<qrcode[^>]*>(.*?)</qrcode>"), "$1")
+    }
+
+    private fun stripEscPosTags(text: String): String {
+        return sanitizeEscPosText(text)
+            .replace(Regex("<[^>]+>", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL)), "")
+    }
+
+    private fun decodePrintableText(text: String): String {
+        return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_LEGACY)
+            .toString()
+            .replace("\u00A0", " ")
     }
 
     private fun formatThermalText(content: String): String {
         val normalized = content
             .replace("<br>", "<br/>", ignoreCase = true)
-            .replace("</p>", "</p>\n", ignoreCase = true)
-            .replace("</div>", "</div>\n", ignoreCase = true)
-            .replace("</tr>", "</tr>\n", ignoreCase = true)
+            .replace("<br/>", "\n", ignoreCase = true)
+            .replace("</p>", "\n", ignoreCase = true)
+            .replace("</div>", "\n", ignoreCase = true)
+            .replace("</tr>", "\n", ignoreCase = true)
+            .replace("</li>", "\n", ignoreCase = true)
 
-        val text = if (looksLikeHtml(normalized)) {
+        val containsEscPosMarkup = Regex(
+            """\[(L|C|R)]|<(\/)?(b|u|font|barcode|qrcode|img)(\s+[^>]*)?>""",
+            RegexOption.IGNORE_CASE
+        ).containsMatchIn(normalized)
+
+        val text = if (looksLikeHtml(normalized) && !containsEscPosMarkup) {
             HtmlCompat.fromHtml(normalized, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
         } else {
             normalized
         }
 
-        return text.replace("\u00A0", " ").trim()
+        return text.replace("\u00A0", " ").trimEnd()
     }
 
     private fun loadLogoForEscPos(linkLogo: String): ByteArray? {

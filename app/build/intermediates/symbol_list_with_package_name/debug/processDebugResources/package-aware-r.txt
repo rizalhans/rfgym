@@ -3838,10 +3838,16 @@ string print_empty_content
 string print_job_name
 string print_not_available
 string print_started
+string printer_action_print
+string printer_action_save_and_print
 string printer_connecting
-string printer_failed_fallback
+string printer_failed_no_fallback
+string printer_not_available
 string printer_permission_denied
 string printer_picker_title
+string printer_saved
+string printer_saved_badge
+string printer_selection_cancelled
 string printer_selection_cleared
 string printer_sent_to_device
 string printer_unknown_name
