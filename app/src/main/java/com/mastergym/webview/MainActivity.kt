@@ -11,6 +11,8 @@ import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Canvas
+import android.graphics.Paint
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -489,11 +491,13 @@ class MainActivity : AppCompatActivity() {
                 val sb = StringBuilder()
                 if (linkLogo.isNotBlank()) {
                     loadLogoBitmap(linkLogo)?.let { bitmap ->
-                        val hexStr = PrinterTextParserImg.bitmapToHexadecimalString(printer, bitmap, false)
+                        val flatBitmap = flattenOnWhite(bitmap)
+                        bitmap.recycle()
+                        val hexStr = PrinterTextParserImg.bitmapToHexadecimalString(printer, flatBitmap, false)
+                        flatBitmap.recycle()
                         if (hexStr.isNotEmpty()) {
                             sb.append("[C]<img>$hexStr</img>\n")
                         }
-                        bitmap.recycle()
                     }
                 }
 
@@ -519,6 +523,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.start()
+    }
+
+    private fun flattenOnWhite(src: Bitmap): Bitmap {
+        val result = Bitmap.createBitmap(src.width, src.height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(result)
+        canvas.drawColor(android.graphics.Color.WHITE)
+        canvas.drawBitmap(src, 0f, 0f, Paint(Paint.ANTI_ALIAS_FLAG))
+        return result
     }
 
     private fun loadLogoBitmap(linkLogo: String): Bitmap? {
