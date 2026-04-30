@@ -17,6 +17,7 @@ INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifes
 INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-55:12
 MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/656249efd103dd1b02ac73a493a8d6f5/transformed/viewbinding-8.5.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/7f97d264f13aac2ced4fd6a3f60e52ba/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.3.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/507ae82bae69fedf772aa34dad968a2e/transformed/ESCPOS-ThermalPrinter-Android-3.3.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/2513e894d292adb3f06ac91373929ba4/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/15f4a640c7207b24b0b3a9bf0413ea98/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/f19e6efddde5211c870f3a51ff4956e5/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
@@ -186,6 +187,8 @@ MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/rizalhans/.gradle/ca
 MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/656249efd103dd1b02ac73a493a8d6f5/transformed/viewbinding-8.5.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/7f97d264f13aac2ced4fd6a3f60e52ba/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/7f97d264f13aac2ced4fd6a3f60e52ba/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.3.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/507ae82bae69fedf772aa34dad968a2e/transformed/ESCPOS-ThermalPrinter-Android-3.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.3.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/507ae82bae69fedf772aa34dad968a2e/transformed/ESCPOS-ThermalPrinter-Android-3.3.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/2513e894d292adb3f06ac91373929ba4/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/2513e894d292adb3f06ac91373929ba4/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/rizalhans/.gradle/caches/9.0-milestone-1/transforms/15f4a640c7207b24b0b3a9bf0413ea98/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
