@@ -17,8 +17,13 @@
     <string name="print_started">Dialog print telah dibuka.</string>
     <string name="printer_action_print">Print</string>
     <string name="printer_action_save_and_print">Simpan &amp; print</string>
+    <string name="printer_bluetooth_not_supported">Perangkat ini tidak mendukung Bluetooth.</string>
+    <string name="printer_bluetooth_off">Bluetooth di perangkat sedang mati.</string>
     <string name="printer_connecting">Menghubungkan ke %1$s…</string>
+    <string name="printer_connection_lost">Koneksi ke %1$s terputus. Pastikan printer menyala dan dekat perangkat.</string>
     <string name="printer_failed_no_fallback">Print Bluetooth gagal.</string>
+    <string name="printer_failed_unknown_reason">penyebab tidak diketahui.</string>
+    <string name="printer_failed_with_reason">Print Bluetooth gagal: %1$s</string>
     <string name="printer_not_available">Printer Bluetooth tidak tersedia atau belum dipasangkan.</string>
     <string name="printer_permission_denied">Izin Bluetooth dibutuhkan untuk print thermal langsung.</string>
     <string name="printer_picker_title">Pilih printer thermal</string>

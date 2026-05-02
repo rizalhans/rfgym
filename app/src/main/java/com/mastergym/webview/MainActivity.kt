@@ -3,6 +3,7 @@ package com.mastergym.webview
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -18,8 +19,10 @@ import android.os.Build
 import android.os.Bundle
 import android.print.PrintAttributes
 import android.print.PrintManager
+import android.provider.Settings
 import android.provider.MediaStore
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.webkit.CookieManager
 import android.webkit.JavascriptInterface
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val PRINTER_PREFS = "thermal_printer_prefs"
         private const val KEY_PRINTER_ADDRESS = "selected_printer_address"
+        private const val TAG = "MainActivity"
     }
 
     private lateinit var binding: ActivityMainBinding
@@ -88,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, getString(R.string.printer_permission_denied), Toast.LENGTH_SHORT)
                     .show()
+                openAppPermissionSettings()
             }
         }
 
@@ -408,6 +413,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun continueThermalPrint(content: String, linkLogo: String) {
+        val bluetoothStateMessage = getBluetoothStateMessage()
+        if (bluetoothStateMessage != null) {
+            Toast.makeText(this, bluetoothStateMessage, Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val pairedPrinters = BluetoothPrintersConnections().getList()?.toList().orEmpty()
 
         if (pairedPrinters.isNotEmpty()) {
@@ -417,6 +428,18 @@ class MainActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, getString(R.string.printer_not_available), Toast.LENGTH_SHORT).show()
         }
+    }
+
+    @Suppress("DEPRECATION")
+    private fun getBluetoothStateMessage(): String? {
+        val adapter = BluetoothAdapter.getDefaultAdapter()
+            ?: return getString(R.string.printer_bluetooth_not_supported)
+
+        if (!adapter.isEnabled) {
+            return getString(R.string.printer_bluetooth_off)
+        }
+
+        return null
     }
 
     private fun showPrinterChooser(
@@ -513,16 +536,61 @@ class MainActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            } catch (_: Exception) {
-                errorMessage = getString(R.string.printer_failed_no_fallback)
+            } catch (e: Exception) {
+                Log.e(TAG, "Bluetooth print failed for ${connection.device?.address}", e)
+                errorMessage = buildBluetoothPrintErrorMessage(e, deviceLabel)
             }
 
             if (errorMessage != null) {
                 runOnUiThread {
                     Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+                    if (isBluetoothPermissionError(errorMessage)) {
+                        openAppPermissionSettings()
+                    }
                 }
             }
         }.start()
+    }
+
+    private fun isBluetoothPermissionError(errorMessage: String): Boolean {
+        return errorMessage.contains(getString(R.string.printer_permission_denied), ignoreCase = true)
+    }
+
+    private fun openAppPermissionSettings() {
+        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+            data = Uri.fromParts("package", packageName, null)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+
+        try {
+            startActivity(intent)
+        } catch (_: ActivityNotFoundException) {
+            Toast.makeText(this, getString(R.string.open_link_error), Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun buildBluetoothPrintErrorMessage(exception: Exception, deviceLabel: String): String {
+        val message = exception.message?.trim().orEmpty()
+        val normalized = message.lowercase()
+        val effectiveLabel = deviceLabel.ifBlank { getString(R.string.printer_unknown_name) }
+
+        val reason = when {
+            normalized.contains("permission") -> getString(R.string.printer_permission_denied)
+            normalized.contains("socket") ||
+                normalized.contains("broken pipe") ||
+                normalized.contains("connection reset") ||
+                normalized.contains("software caused connection abort") ||
+                normalized.contains("read failed") -> {
+                getString(R.string.printer_connection_lost, effectiveLabel)
+            }
+            normalized.contains("bluetooth") && normalized.contains("off") -> {
+                getString(R.string.printer_bluetooth_off)
+            }
+            message.isNotEmpty() -> message
+            else -> getString(R.string.printer_failed_unknown_reason)
+        }
+
+        return getString(R.string.printer_failed_with_reason, reason)
     }
 
     private fun flattenOnWhite(src: Bitmap): Bitmap {
