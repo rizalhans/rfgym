@@ -323,7 +323,10 @@ class MainActivity : AppCompatActivity() {
             return emptyList()
         }
 
-        return listOf(Manifest.permission.BLUETOOTH_CONNECT)
+        return listOf(
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.BLUETOOTH_SCAN
+        )
             .filterNot(::hasPermission)
     }
 
