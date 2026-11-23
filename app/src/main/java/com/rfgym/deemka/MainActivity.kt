@@ -27,6 +27,7 @@ import android.view.View
 import android.webkit.CookieManager
 import android.webkit.JavascriptInterface
 import android.webkit.MimeTypeMap
+import android.webkit.PermissionRequest
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
@@ -64,10 +65,27 @@ class MainActivity : AppCompatActivity() {
     private var receiptPrintWebView: WebView? = null
     private var pendingPrintContent: String? = null
     private var pendingPrintLogo: String? = null
+    private var pendingWebPermissionRequest: PermissionRequest? = null
 
     private val cameraPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
             if (!granted) {
+                Toast.makeText(this, getString(R.string.camera_permission_denied), Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+    // Izin kamera untuk getUserMedia (QR Checkin / Face Check-in) dari halaman web
+    private val webCameraPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            val request = pendingWebPermissionRequest
+            pendingWebPermissionRequest = null
+            if (request == null) return@registerForActivityResult
+
+            if (granted) {
+                grantWebPermissionRequest(request)
+            } else {
+                request.deny()
                 Toast.makeText(this, getString(R.string.camera_permission_denied), Toast.LENGTH_SHORT)
                     .show()
             }
@@ -143,6 +161,7 @@ class MainActivity : AppCompatActivity() {
             builtInZoomControls = false
             displayZoomControls = false
             mixedContentMode = WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE
+            mediaPlaybackRequiresUserGesture = false
         }
         binding.webView.addJavascriptInterface(WebAppBridge(), "Android")
 
@@ -150,6 +169,32 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
                 binding.progressBar.visibility = if (newProgress < 100) View.VISIBLE else View.GONE
                 super.onProgressChanged(view, newProgress)
+            }
+
+            override fun onPermissionRequest(request: PermissionRequest?) {
+                if (request == null) return
+                runOnUiThread {
+                    val wantsCamera = request.resources.contains(PermissionRequest.RESOURCE_VIDEO_CAPTURE)
+                    if (!wantsCamera) {
+                        request.deny()
+                        return@runOnUiThread
+                    }
+
+                    if (hasPermission(Manifest.permission.CAMERA)) {
+                        grantWebPermissionRequest(request)
+                    } else {
+                        pendingWebPermissionRequest?.deny()
+                        pendingWebPermissionRequest = request
+                        webCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
+                    }
+                }
+            }
+
+            override fun onPermissionRequestCanceled(request: PermissionRequest?) {
+                if (request != null && request == pendingWebPermissionRequest) {
+                    pendingWebPermissionRequest = null
+                }
+                super.onPermissionRequestCanceled(request)
             }
 
             override fun onShowFileChooser(
@@ -372,6 +417,16 @@ class MainActivity : AppCompatActivity() {
             }
             .distinct()
             .toTypedArray()
+    }
+
+    // Hanya izinkan kamera untuk halaman dari domain aplikasi sendiri
+    private fun grantWebPermissionRequest(request: PermissionRequest) {
+        val allowedHost = Uri.parse(getString(R.string.webview_url)).host
+        if (allowedHost != null && request.origin?.host == allowedHost) {
+            request.grant(arrayOf(PermissionRequest.RESOURCE_VIDEO_CAPTURE))
+        } else {
+            request.deny()
+        }
     }
 
     private fun resetFileChooserState() {

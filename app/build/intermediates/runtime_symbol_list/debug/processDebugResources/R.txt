@@ -3866,9 +3866,8 @@ int string side_sheet_accessibility_pane_title 0x7f0f00bf
 int string side_sheet_behavior 0x7f0f00c0
 int string splash_subtitle 0x7f0f00c1
 int string splash_tagline 0x7f0f00c2
-int string splash_title 0x7f0f00c3
-int string status_bar_notification_info_overflow 0x7f0f00c4
-int string webview_url 0x7f0f00c5
+int string status_bar_notification_info_overflow 0x7f0f00c3
+int string webview_url 0x7f0f00c4
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style Animation_AppCompat_Dialog 0x7f100002

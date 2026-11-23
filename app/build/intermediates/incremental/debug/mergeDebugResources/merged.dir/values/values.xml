@@ -2077,7 +2077,6 @@
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="splash_subtitle">rfgym.deemka.com</string>
     <string name="splash_tagline">Fitness &amp; Senam</string>
-    <string name="splash_title">RF Gym</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="webview_url">https://rfgym.deemka.com/dashboard/</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

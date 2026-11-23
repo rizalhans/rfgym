@@ -6,7 +6,6 @@
     <string name="file_chooser_error">Pemilih file tidak tersedia di perangkat ini.</string>
     <string name="file_permission_denied">Izin foto/kamera dibutuhkan untuk upload gambar.</string>
     <string name="camera_permission_denied">Izin kamera belum diberikan.</string>
-    <string name="splash_title">RF Gym</string>
     <string name="splash_subtitle">rfgym.deemka.com</string>
     <string name="splash_tagline">Fitness &amp; Senam</string>
     <string name="print_job_name">RF Gym Thermal Print</string>

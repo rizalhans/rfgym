@@ -50,7 +50,6 @@ string printer_sent_to_device
 string printer_unknown_name
 string splash_subtitle
 string splash_tagline
-string splash_title
 string webview_url
 style Theme.MasterGymWV
 style Theme.MasterGymWV.Splash

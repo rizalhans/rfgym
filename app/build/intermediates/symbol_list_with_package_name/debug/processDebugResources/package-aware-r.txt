@@ -3867,7 +3867,6 @@ string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string splash_subtitle
 string splash_tagline
-string splash_title
 string status_bar_notification_info_overflow
 string webview_url
 style AlertDialog_AppCompat

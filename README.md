@@ -30,6 +30,16 @@ Lalu ganti nilai berikut:
 2. Tunggu proses **Gradle Sync**.
 3. Jalankan ke emulator atau perangkat Android.
 
+### Activity tidak ditemukan saat menjalankan
+
+Jika muncul error dengan package `com.mastergym.webview` dan activity
+`com.rfgym.deemka.SplashActivity`, konfigurasi peluncuran menggunakan app ID
+lama. Lakukan **Sync Project with Gradle Files**, lalu di **Run > Edit
+Configurations**, pilih modul `app` dan **Launch: Default Activity**.
+Jika masih terjadi, hapus dan buat ulang konfigurasi Android App untuk modul
+`app`. App ID dan launcher saat ini adalah `com.rfgym.deemka` dan
+`com.rfgym.deemka.SplashActivity`.
+
 ## Catatan
 
 - `minSdk` saat ini: `24`

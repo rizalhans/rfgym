@@ -1,4 +1,4 @@
-#Mon Nov 23 19:25:20 WIB 2026
+#Mon Nov 23 19:55:05 WIB 2026
 base.0=/opt/homebrew/var/www/rfgym/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
 base.1=/opt/homebrew/var/www/rfgym/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
 base.2=/opt/homebrew/var/www/rfgym/app/build/intermediates/global_synthetics_dex/debugAndroidTest/mergeDebugAndroidTestGlobalSynthetics/classes.dex
