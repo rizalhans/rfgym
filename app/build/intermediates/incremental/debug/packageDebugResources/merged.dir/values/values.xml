@@ -6,13 +6,14 @@
     <color name="brand_orange">#F2994A</color>
     <color name="brand_white">#FFFFFF</color>
     <color name="ic_launcher_background">@color/brand_black</color>
-    <string name="app_name">Master Gym</string>
+    <string name="app_name">RF Gym</string>
+    <string name="camera_permission_denied">Izin kamera belum diberikan.</string>
     <string name="file_chooser_error">Pemilih file tidak tersedia di perangkat ini.</string>
     <string name="file_chooser_title">Pilih file atau foto</string>
     <string name="file_permission_denied">Izin foto/kamera dibutuhkan untuk upload gambar.</string>
     <string name="open_link_error">Tidak ada aplikasi untuk membuka tautan ini.</string>
     <string name="print_empty_content">Konten print masih kosong.</string>
-    <string name="print_job_name">MasterGym Thermal Print</string>
+    <string name="print_job_name">RF Gym Thermal Print</string>
     <string name="print_not_available">Layanan print belum tersedia di perangkat ini.</string>
     <string name="print_started">Dialog print telah dibuka.</string>
     <string name="printer_action_print">Print</string>
@@ -33,10 +34,10 @@
     <string name="printer_selection_cleared">Printer tersimpan sudah direset.</string>
     <string name="printer_sent_to_device">Print terkirim ke %1$s.</string>
     <string name="printer_unknown_name">Printer Bluetooth</string>
-    <string name="splash_subtitle">www.mastergym.id</string>
+    <string name="splash_subtitle">rfgym.deemka.com</string>
     <string name="splash_tagline">Fitness &amp; Senam</string>
-    <string name="splash_title">MASTER GYM</string>
-    <string name="webview_url">https://mastergym.id/dashboard/</string>
+    <string name="splash_title">RF Gym</string>
+    <string name="webview_url">https://rfgym.deemka.com/dashboard/</string>
     <style name="Theme.MasterGymWV" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:navigationBarColor">@color/brand_black</item>
         <item name="android:statusBarColor">@color/brand_black</item>

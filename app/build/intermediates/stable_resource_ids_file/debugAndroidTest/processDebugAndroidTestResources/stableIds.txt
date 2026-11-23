@@ -1,2 +1,2 @@
-com.mastergym.webview.test:style/WhiteBackgroundTheme = 0x7f010001
-com.mastergym.webview.test:style/WhiteBackgroundDialogTheme = 0x7f010000
+com.rfgym.deemka.test:style/WhiteBackgroundTheme = 0x7f010001
+com.rfgym.deemka.test:style/WhiteBackgroundDialogTheme = 0x7f010000

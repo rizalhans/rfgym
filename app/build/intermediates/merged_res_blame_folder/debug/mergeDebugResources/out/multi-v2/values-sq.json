@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mastergym.webview.app-mergeDebugResources-34:/values-sq/values-sq.xml",
+            "outputFile": "com.rfgym.deemka.app-mergeDebugResources-34:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "/Users/rizalhans/.gradle/caches/9.1.0/transforms/08398366a65a40fc80cf8f7c2f462ceb/transformed/appcompat-1.7.0/res/values-sq/values-sq.xml",

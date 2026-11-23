@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.mastergym.webview.app-mergeDebugResources-34:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.rfgym.deemka.app-mergeDebugResources-34:/values-night-v8/values-night-v8.xml",
             "map": [
-                {
-                    "source": "/Users/rizalhans/Projects/mastergym-wv/app/src/main/res/values-night/themes.xml",
-                    "from": {
-                        "startLines": "1,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "16,329",
-                        "endLines": "5,11",
-                        "endColumns": "12,12",
-                        "endOffsets": "323,643"
-                    },
-                    "to": {
-                        "startLines": "9,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "687,999",
-                        "endLines": "13,18",
-                        "endColumns": "12,12",
-                        "endOffsets": "994,1313"
-                    }
-                },
                 {
                     "source": "/Users/rizalhans/.gradle/caches/9.1.0/transforms/2f67a561c3cb1ccd208c3e2d1eb6f5d2/transformed/material-1.12.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
@@ -37,6 +18,25 @@
                         "startOffsets": "1318,1393,1504,1593,1694,1801,1908,2007,2114,2217,2344,2432,2556,2658,2760,2876,2978,3092,3220,3336,3458,3594,3714,3848,3968,4080,4295,4412,4536,4666,4788,4926,5060,5176",
                         "endColumns": "74,110,88,100,106,106,98,106,102,126,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "1388,1499,1588,1689,1796,1903,2002,2109,2212,2339,2427,2551,2653,2755,2871,2973,3087,3215,3331,3453,3589,3709,3843,3963,4075,4201,4407,4531,4661,4783,4921,5055,5171,5291"
+                    }
+                },
+                {
+                    "source": "/opt/homebrew/var/www/rfgym/app/src/main/res/values-night/themes.xml",
+                    "from": {
+                        "startLines": "1,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "16,329",
+                        "endLines": "5,11",
+                        "endColumns": "12,12",
+                        "endOffsets": "323,643"
+                    },
+                    "to": {
+                        "startLines": "9,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "687,999",
+                        "endLines": "13,18",
+                        "endColumns": "12,12",
+                        "endOffsets": "994,1313"
                     }
                 },
                 {

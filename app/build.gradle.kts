@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.mastergym.webview"
+    namespace = "com.rfgym.deemka"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mastergym.webview"
+        applicationId = "com.rfgym.deemka"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

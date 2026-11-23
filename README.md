@@ -34,6 +34,6 @@ Lalu ganti nilai berikut:
 
 - `minSdk` saat ini: `24`
 - `compileSdk` / `targetSdk`: `34`
-- Package name: `com.mastergym.webview`
+- Package name: `com.rfgym.deemka`
 
 Printer Repo : https://github.com/dantsu/escpos-thermalprinter-android

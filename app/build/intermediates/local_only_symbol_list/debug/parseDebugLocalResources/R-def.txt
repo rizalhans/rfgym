@@ -10,6 +10,7 @@ drawable ic_launcher_foreground
 drawable ic_mastergym_logo
 drawable logo
 drawable mastergym_logo_badge
+drawable rf_gym_launcher_foreground
 id logoImage
 id progressBar
 id webView
@@ -18,7 +19,9 @@ layout activity_splash
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap rf_gym_launcher
 string app_name
+string camera_permission_denied
 string file_chooser_error
 string file_chooser_title
 string file_permission_denied

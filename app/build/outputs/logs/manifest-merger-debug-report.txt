@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:45:9-53:20
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:45:9-53:20
 	android:grantUriPermissions
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:49:13-47
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:49:13-47
 	android:authorities
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:47:13-64
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:47:13-64
 	android:exported
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:48:13-37
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:46:13-62
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:46:13-62
 manifest
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:1-56:12
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:2:1-56:12
 MERGED from [androidx.databinding:viewbinding:9.0.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/7af83d185cd12d753605befd10f7ff86/transformed/viewbinding-9.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/2f67a561c3cb1ccd208c3e2d1eb6f5d2/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/5aa4dff335d137baa831ea8ef245dce2/transformed/ESCPOS-ThermalPrinter-Android-3.3.0/AndroidManifest.xml:2:1-9:12
@@ -63,58 +63,58 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rizalhans/.gradle/
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/842c1791bc531c8673f6e7faaa205c99/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/92e7d313fadda8047f41359ff628005d/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 	package
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.CAMERA
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:5:5-65
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:5:5-65
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:5:22-62
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:6:5-8:38
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:6:5-8:38
 	android:maxSdkVersion
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:8:9-35
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:7:9-64
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:7:9-64
 uses-permission#android.permission.READ_MEDIA_IMAGES
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:9:5-76
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:9:5-76
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:9:22-73
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:9:22-73
 uses-permission#android.permission.READ_MEDIA_VISUAL_USER_SELECTED
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:10:5-90
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:10:5-90
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:10:22-87
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:10:22-87
 uses-permission#android.permission.BLUETOOTH
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:11:5-13:38
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:11:5-13:38
 	android:maxSdkVersion
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:13:9-35
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:12:9-52
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:12:9-52
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:14:5-16:38
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:14:5-16:38
 	android:maxSdkVersion
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:16:9-35
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:15:9-58
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:15:9-58
 uses-permission#android.permission.BLUETOOTH_CONNECT
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:17:5-76
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:17:5-76
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:17:22-73
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:17:22-73
 uses-permission#android.permission.BLUETOOTH_SCAN
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:18:5-73
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:18:5-73
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:18:22-70
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:18:22-70
 application
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:20:5-54:19
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:20:5-54:19
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:20:5-54:19
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:20:5-54:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/2f67a561c3cb1ccd208c3e2d1eb6f5d2/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/2f67a561c3cb1ccd208c3e2d1eb6f5d2/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/128648435cddd7634973ea627b6ef9c4/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -132,61 +132,61 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/riza
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/a4fa2c557626d5b1895c77be9ecfe60f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/a4fa2c557626d5b1895c77be9ecfe60f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:26:9-35
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:26:9-35
 	android:label
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:23:9-41
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:23:9-41
 	android:roundIcon
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:25:9-54
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:25:9-52
 	android:icon
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:22:9-43
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:22:9-47
 	android:allowBackup
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:21:9-35
 	android:theme
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:27:9-49
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:27:9-49
 	android:networkSecurityConfig
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:24:9-69
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:24:9-69
 	android:usesCleartextTraffic
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:28:9-44
-activity#com.mastergym.webview.MainActivity
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:29:9-32:40
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:28:9-44
+activity#com.rfgym.deemka.MainActivity
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:29:9-32:40
 	android:exported
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:32:13-37
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:32:13-37
 	android:configChanges
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:31:13-74
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:31:13-74
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:30:13-41
-activity#com.mastergym.webview.SplashActivity
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:34:9-43:20
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:30:13-41
+activity#com.rfgym.deemka.SplashActivity
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:34:9-43:20
 	android:exported
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:36:13-36
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:36:13-36
 	android:theme
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:37:13-60
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:37:13-60
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:35:13-43
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:35:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:38:13-42:29
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:39:17-69
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:39:25-66
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:41:17-77
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:41:27-74
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:41:27-74
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:50:13-52:54
+ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:50:13-52:54
 	android:resource
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:52:17-51
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:52:17-51
 	android:name
-		ADDED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml:51:17-67
+		ADDED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml:51:17-67
 uses-sdk
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
-INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
+INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:9.0.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/7af83d185cd12d753605befd10f7ff86/transformed/viewbinding-9.0.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:9.0.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/7af83d185cd12d753605befd10f7ff86/transformed/viewbinding-9.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.12.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/2f67a561c3cb1ccd208c3e2d1eb6f5d2/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
@@ -282,9 +282,9 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/92e7d313fadda8047f41359ff628005d/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/92e7d313fadda8047f41359ff628005d/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/rizalhans/Projects/mastergym-wv/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/homebrew/var/www/rfgym/app/src/main/AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/01dcdac3c02c5ec497096ee983682861/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rizalhans/.gradle/caches/9.1.0/transforms/4ab785700c92dd5eb4fb6af790e388d9/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
@@ -313,7 +313,7 @@ ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/tra
 		ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
-permission#com.mastergym.webview.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.rfgym.deemka.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
@@ -323,7 +323,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
-uses-permission#com.mastergym.webview.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.rfgym.deemka.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/cbcb1339dd8e751d6e77b60445d4aeee/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
