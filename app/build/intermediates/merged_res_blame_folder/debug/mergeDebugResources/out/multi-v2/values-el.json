@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rfgym.deemka.app-mergeDebugResources-34:/values-el/values-el.xml",
+            "outputFile": "com.rfgym.deemka.app-mergeDebugResources-35:/values-el/values-el.xml",
             "map": [
                 {
                     "source": "/Users/rizalhans/.gradle/caches/9.1.0/transforms/9d66e2c42d64d468f347da69f199370e/transformed/material-1.12.0/res/values-el/values-el.xml",

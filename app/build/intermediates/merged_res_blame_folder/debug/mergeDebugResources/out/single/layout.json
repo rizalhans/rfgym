@@ -1,10 +1,10 @@
 [
     {
-        "merged": "com.rfgym.deemka.app-mergeDebugResources-35:/layout/activity_main.xml",
-        "source": "com.rfgym.deemka.app-main-38:/layout/activity_main.xml"
+        "merged": "com.rfgym.deemka.app-mergeDebugResources-36:/layout/activity_splash.xml",
+        "source": "com.rfgym.deemka.app-main-39:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.rfgym.deemka.app-mergeDebugResources-35:/layout/activity_splash.xml",
-        "source": "com.rfgym.deemka.app-main-38:/layout/activity_splash.xml"
+        "merged": "com.rfgym.deemka.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.rfgym.deemka.app-main-39:/layout/activity_main.xml"
     }
 ]

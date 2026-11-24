@@ -25,6 +25,7 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rizalhans/.gradle/cach
 MERGED from [androidx.fragment:fragment:1.5.4] /Users/rizalhans/.gradle/caches/9.1.0/transforms/e119fca0a0ff57b1ec613f508d0b5a6b/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.9.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/ee261c820601ccbd28611ada5e6dccad/transformed/activity-1.9.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/014b557ac6451341150488d43ec43175/transformed/activity-ktx-1.9.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/ee4c2e5c85663784bc76fb1f98d19020/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/596faf1764a4deb4fa0f015b107e17ff/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/fc3df6fee9827f8179c8f18c37abcefd/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/5e9dc44fd4e5171f280c8de70f89b24b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
@@ -207,6 +208,8 @@ MERGED from [androidx.activity:activity:1.9.1] /Users/rizalhans/.gradle/caches/9
 MERGED from [androidx.activity:activity:1.9.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/ee261c820601ccbd28611ada5e6dccad/transformed/activity-1.9.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/014b557ac6451341150488d43ec43175/transformed/activity-ktx-1.9.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/rizalhans/.gradle/caches/9.1.0/transforms/014b557ac6451341150488d43ec43175/transformed/activity-ktx-1.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/ee4c2e5c85663784bc76fb1f98d19020/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/ee4c2e5c85663784bc76fb1f98d19020/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/596faf1764a4deb4fa0f015b107e17ff/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/596faf1764a4deb4fa0f015b107e17ff/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/rizalhans/.gradle/caches/9.1.0/transforms/fc3df6fee9827f8179c8f18c37abcefd/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44

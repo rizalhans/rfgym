@@ -13,6 +13,7 @@ drawable mastergym_logo_badge
 drawable rf_gym_launcher_foreground
 id logoImage
 id progressBar
+id swipeRefresh
 id webView
 layout activity_main
 layout activity_splash

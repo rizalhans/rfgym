@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.rfgym.deemka.R;
@@ -24,12 +25,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ProgressBar progressBar;
 
   @NonNull
+  public final SwipeRefreshLayout swipeRefresh;
+
+  @NonNull
   public final WebView webView;
 
   private ActivityMainBinding(@NonNull FrameLayout rootView, @NonNull ProgressBar progressBar,
-      @NonNull WebView webView) {
+      @NonNull SwipeRefreshLayout swipeRefresh, @NonNull WebView webView) {
     this.rootView = rootView;
     this.progressBar = progressBar;
+    this.swipeRefresh = swipeRefresh;
     this.webView = webView;
   }
 
@@ -66,13 +71,19 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.swipeRefresh;
+      SwipeRefreshLayout swipeRefresh = ViewBindings.findChildViewById(rootView, id);
+      if (swipeRefresh == null) {
+        break missingId;
+      }
+
       id = R.id.webView;
       WebView webView = ViewBindings.findChildViewById(rootView, id);
       if (webView == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((FrameLayout) rootView, progressBar, webView);
+      return new ActivityMainBinding((FrameLayout) rootView, progressBar, swipeRefresh, webView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

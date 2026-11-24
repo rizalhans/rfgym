@@ -165,9 +165,19 @@ class MainActivity : AppCompatActivity() {
         }
         binding.webView.addJavascriptInterface(WebAppBridge(), "Android")
 
+        binding.swipeRefresh.setOnChildScrollUpCallback { _, _ ->
+            binding.webView.canScrollVertically(-1)
+        }
+        binding.swipeRefresh.setOnRefreshListener {
+            binding.webView.reload()
+        }
+
         binding.webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
-                binding.progressBar.visibility = if (newProgress < 100) View.VISIBLE else View.GONE
+                val loading = newProgress < 100
+                binding.progressBar.visibility =
+                    if (loading && !binding.swipeRefresh.isRefreshing) View.VISIBLE else View.GONE
+                if (!loading) binding.swipeRefresh.isRefreshing = false
                 super.onProgressChanged(view, newProgress)
             }
 
